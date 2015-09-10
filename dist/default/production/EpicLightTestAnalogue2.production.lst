@@ -1,0 +1,845 @@
+
+
+Microchip Technology PIC LITE Macro Assembler V1.35 build -356382666 
+                                                                                               Wed Sep 09 13:21:14 2015
+
+Microchip Technology Omniscient Code Generator v1.35 (Free mode) build 201507080246
+     1                           	processor	16F676
+     2                           	opt	pw 120
+     3                           	opt	lm
+     4                           	psect	cinit,global,class=CODE,merge=1,delta=2
+     5                           	psect	cstackCOMMON,global,class=COMMON,space=1,delta=1
+     6                           	psect	cstackBANK0,global,class=BANK0,space=1,delta=1
+     7                           	psect	maintext,global,class=CODE,split=1,delta=2
+     8                           	psect	text1,local,class=CODE,merge=1,delta=2
+     9                           	psect	text2,local,class=CODE,merge=1,delta=2
+    10                           	psect	text3,local,class=CODE,merge=1,delta=2
+    11                           	psect	text4,local,class=CODE,merge=1,delta=2
+    12                           	psect	text5,local,class=CODE,merge=1,delta=2
+    13                           	dabs	1,0x5E,2
+    14  0000                     	;# 
+    15  0001                     	;# 
+    16  0002                     	;# 
+    17  0003                     	;# 
+    18  0004                     	;# 
+    19  0005                     	;# 
+    20  0007                     	;# 
+    21  000A                     	;# 
+    22  000B                     	;# 
+    23  000C                     	;# 
+    24  000E                     	;# 
+    25  000E                     	;# 
+    26  000F                     	;# 
+    27  0010                     	;# 
+    28  0019                     	;# 
+    29  001E                     	;# 
+    30  001F                     	;# 
+    31  0081                     	;# 
+    32  0085                     	;# 
+    33  0087                     	;# 
+    34  008C                     	;# 
+    35  008E                     	;# 
+    36  0090                     	;# 
+    37  0091                     	;# 
+    38  0095                     	;# 
+    39  0095                     	;# 
+    40  0096                     	;# 
+    41  0096                     	;# 
+    42  0099                     	;# 
+    43  009A                     	;# 
+    44  009A                     	;# 
+    45  009B                     	;# 
+    46  009C                     	;# 
+    47  009D                     	;# 
+    48  009E                     	;# 
+    49  009F                     	;# 
+    50  0000                     	;# 
+    51  0001                     	;# 
+    52  0002                     	;# 
+    53  0003                     	;# 
+    54  0004                     	;# 
+    55  0005                     	;# 
+    56  0007                     	;# 
+    57  000A                     	;# 
+    58  000B                     	;# 
+    59  000C                     	;# 
+    60  000E                     	;# 
+    61  000E                     	;# 
+    62  000F                     	;# 
+    63  0010                     	;# 
+    64  0019                     	;# 
+    65  001E                     	;# 
+    66  001F                     	;# 
+    67  0081                     	;# 
+    68  0085                     	;# 
+    69  0087                     	;# 
+    70  008C                     	;# 
+    71  008E                     	;# 
+    72  0090                     	;# 
+    73  0091                     	;# 
+    74  0095                     	;# 
+    75  0095                     	;# 
+    76  0096                     	;# 
+    77  0096                     	;# 
+    78  0099                     	;# 
+    79  009A                     	;# 
+    80  009A                     	;# 
+    81  009B                     	;# 
+    82  009C                     	;# 
+    83  009D                     	;# 
+    84  009E                     	;# 
+    85  009F                     	;# 
+    86  0000                     	;# 
+    87  0001                     	;# 
+    88  0002                     	;# 
+    89  0003                     	;# 
+    90  0004                     	;# 
+    91  0005                     	;# 
+    92  0007                     	;# 
+    93  000A                     	;# 
+    94  000B                     	;# 
+    95  000C                     	;# 
+    96  000E                     	;# 
+    97  000E                     	;# 
+    98  000F                     	;# 
+    99  0010                     	;# 
+   100  0019                     	;# 
+   101  001E                     	;# 
+   102  001F                     	;# 
+   103  0081                     	;# 
+   104  0085                     	;# 
+   105  0087                     	;# 
+   106  008C                     	;# 
+   107  008E                     	;# 
+   108  0090                     	;# 
+   109  0091                     	;# 
+   110  0095                     	;# 
+   111  0095                     	;# 
+   112  0096                     	;# 
+   113  0096                     	;# 
+   114  0099                     	;# 
+   115  009A                     	;# 
+   116  009A                     	;# 
+   117  009B                     	;# 
+   118  009C                     	;# 
+   119  009D                     	;# 
+   120  009E                     	;# 
+   121  009F                     	;# 
+   122  001F                     _ADCON0	set	31
+   123  001E                     _ADRESH	set	30
+   124  0019                     _CMCON	set	25
+   125  0005                     _PORTA	set	5
+   126  0007                     _PORTC	set	7
+   127  00F8                     _ADON	set	248
+   128  00F9                     _GO_DONE	set	249
+   129  003B                     _RC3	set	59
+   130  003C                     _RC4	set	60
+   131  003D                     _RC5	set	61
+   132  009F                     _ADCON1	set	159
+   133  0091                     _ANSEL	set	145
+   134  0085                     _TRISA	set	133
+   135  0087                     _TRISC	set	135
+   136                           
+   137                           ; #config settings
+   138  0000                     
+   139                           	psect	cinit
+   140  03FD                     start_initialization:	
+   141  03FD                     __initialization:	
+   142  03FD                     end_of_initialization:	
+   143                           ;End of C runtime variable initialization code
+   144                           
+   145  03FD                     __end_of__initialization:	
+   146  03FD  0183               	clrf	3
+   147  03FE  2BE3               	ljmp	_main	;jump to C main() function
+   148                           
+   149                           	psect	cstackCOMMON
+   150  0000                     __pcstackCOMMON:	
+   151  0000                     ??_initPorts:	
+   152  0000                     ??_adConvert:	
+   153                           ; 0 bytes @ 0x0
+   154                           
+   155                           
+   156                           	psect	cstackBANK0
+   157  0020                     __pcstackBANK0:	
+   158                           ; 0 bytes @ 0x0
+   159                           
+   160  0020                     ?_initPorts:	
+   161  0020                     ?_PWM1:	
+   162                           ; 0 bytes @ 0x0
+   163                           
+   164  0020                     ??_PWM1:	
+   165                           ; 0 bytes @ 0x0
+   166                           
+   167  0020                     ?_PWM2:	
+   168                           ; 0 bytes @ 0x0
+   169                           
+   170  0020                     ??_PWM2:	
+   171                           ; 0 bytes @ 0x0
+   172                           
+   173  0020                     ?_PWM3:	
+   174                           ; 0 bytes @ 0x0
+   175                           
+   176  0020                     ??_PWM3:	
+   177                           ; 0 bytes @ 0x0
+   178                           
+   179  0020                     ?_adConvert:	
+   180                           ; 0 bytes @ 0x0
+   181                           
+   182  0020                     ?_main:	
+   183                           ; 1 bytes @ 0x0
+   184                           
+   185  0020                     adConvert@chan:	
+   186                           ; 2 bytes @ 0x0
+   187                           
+   188                           
+   189                           ; 1 bytes @ 0x0
+   190  0020                     	ds	1
+   191  0021                     PWM1@number:	
+   192  0021                     PWM2@number:	
+   193                           ; 1 bytes @ 0x1
+   194                           
+   195  0021                     PWM3@number:	
+   196                           ; 1 bytes @ 0x1
+   197                           
+   198                           
+   199                           ; 1 bytes @ 0x1
+   200  0021                     	ds	1
+   201  0022                     PWM1@cTemp:	
+   202  0022                     PWM2@cTemp:	
+   203                           ; 1 bytes @ 0x2
+   204                           
+   205  0022                     PWM3@cTemp:	
+   206                           ; 1 bytes @ 0x2
+   207                           
+   208                           
+   209                           ; 1 bytes @ 0x2
+   210  0022                     	ds	1
+   211  0023                     ??_main:	
+   212                           
+   213                           ; 0 bytes @ 0x3
+   214  0023                     	ds	1
+   215  0024                     main@HIIN2:	
+   216                           
+   217                           ; 1 bytes @ 0x4
+   218  0024                     	ds	1
+   219  0025                     main@MIDIN2:	
+   220                           
+   221                           ; 1 bytes @ 0x5
+   222  0025                     	ds	1
+   223  0026                     main@LOIN2:	
+   224                           
+   225                           ; 1 bytes @ 0x6
+   226  0026                     	ds	1
+   227                           
+   228                           	psect	maintext
+   229  03E3                     __pmaintext:	
+   230 ;;
+   231 ;;Main: autosize = 0, tempsize = 1, incstack = 0, save=0
+   232 ;;
+   233 ;; *************** function _main *****************
+   234 ;; Defined at:
+   235 ;;		line 78 in file "LightTestAnalogue.c"
+   236 ;; Parameters:    Size  Location     Type
+   237 ;;		None
+   238 ;; Auto vars:     Size  Location     Type
+   239 ;;  LOIN2           1    6[BANK0 ] unsigned char 
+   240 ;;  MIDIN2          1    5[BANK0 ] unsigned char 
+   241 ;;  HIIN2           1    4[BANK0 ] unsigned char 
+   242 ;; Return value:  Size  Location     Type
+   243 ;;                  2   67[None  ] int 
+   244 ;; Registers used:
+   245 ;;		wreg, status,2, status,0, pclath, cstack
+   246 ;; Tracked objects:
+   247 ;;		On entry : B00/0
+   248 ;;		On exit  : 0/0
+   249 ;;		Unchanged: 0/0
+   250 ;; Data sizes:     COMMON   BANK0
+   251 ;;      Params:         0       0
+   252 ;;      Locals:         0       3
+   253 ;;      Temps:          0       1
+   254 ;;      Totals:         0       4
+   255 ;;Total ram usage:        4 bytes
+   256 ;; Hardware stack levels required when called:    1
+   257 ;; This function calls:
+   258 ;;		_PWM1
+   259 ;;		_PWM2
+   260 ;;		_PWM3
+   261 ;;		_adConvert
+   262 ;;		_initPorts
+   263 ;; This function is called by:
+   264 ;;		Startup code after reset
+   265 ;; This function uses a non-reentrant model
+   266 ;;
+   267                           
+   268                           
+   269                           ;psect for function _main
+   270  03E3                     _main:	
+   271                           
+   272                           ;LightTestAnalogue.c: 80: initPorts();
+   273                           
+   274                           ;incstack = 0
+   275                           ; Regs used in _main: [wreg+status,2+status,0+pclath+cstack]
+   276  03E3  23D0               	fcall	_initPorts
+   277  03E4                     l627:	
+   278                           ;LightTestAnalogue.c: 82: while (1) {
+   279                           
+   280                           
+   281                           ;LightTestAnalogue.c: 83: unsigned char HIIN2 = 0b00010000;
+   282  03E4  3010               	movlw	16
+   283  03E5  1283               	bcf	3,5	;RP0=0, select bank0
+   284  03E6  00A3               	movwf	??_main
+   285  03E7  0823               	movf	??_main,w
+   286  03E8  00A4               	movwf	main@HIIN2
+   287                           
+   288                           ;LightTestAnalogue.c: 85: PWM1(adConvert(HIIN2));
+   289  03E9  0824               	movf	main@HIIN2,w
+   290  03EA  2389               	fcall	_adConvert
+   291  03EB  239A               	fcall	_PWM1
+   292                           
+   293                           ;LightTestAnalogue.c: 86: unsigned char MIDIN2 = 0b00010100;
+   294  03EC  3014               	movlw	20
+   295  03ED  1283               	bcf	3,5	;RP0=0, select bank0
+   296  03EE  00A3               	movwf	??_main
+   297  03EF  0823               	movf	??_main,w
+   298  03F0  00A5               	movwf	main@MIDIN2
+   299                           
+   300                           ;LightTestAnalogue.c: 88: PWM2(adConvert(MIDIN2));
+   301  03F1  0825               	movf	main@MIDIN2,w
+   302  03F2  2389               	fcall	_adConvert
+   303  03F3  23AC               	fcall	_PWM2
+   304                           
+   305                           ;LightTestAnalogue.c: 90: unsigned char LOIN2 = 0b00011000;
+   306  03F4  3018               	movlw	24
+   307  03F5  1283               	bcf	3,5	;RP0=0, select bank0
+   308  03F6  00A3               	movwf	??_main
+   309  03F7  0823               	movf	??_main,w
+   310  03F8  00A6               	movwf	main@LOIN2
+   311                           
+   312                           ;LightTestAnalogue.c: 91: PWM3(adConvert(LOIN2));
+   313  03F9  0826               	movf	main@LOIN2,w
+   314  03FA  2389               	fcall	_adConvert
+   315  03FB  23BE               	fcall	_PWM3
+   316  03FC  2BE4               	goto	l627
+   317  03FD                     __end_of_main:	
+   318                           
+   319                           	psect	text1
+   320  03D0                     __ptext1:	
+   321 ;; *************** function _initPorts *****************
+   322 ;; Defined at:
+   323 ;;		line 8 in file "PIC16F676program.c"
+   324 ;; Parameters:    Size  Location     Type
+   325 ;;		None
+   326 ;; Auto vars:     Size  Location     Type
+   327 ;;		None
+   328 ;; Return value:  Size  Location     Type
+   329 ;;		None               void
+   330 ;; Registers used:
+   331 ;;		wreg, status,2
+   332 ;; Tracked objects:
+   333 ;;		On entry : 0/0
+   334 ;;		On exit  : 0/0
+   335 ;;		Unchanged: 0/0
+   336 ;; Data sizes:     COMMON   BANK0
+   337 ;;      Params:         0       0
+   338 ;;      Locals:         0       0
+   339 ;;      Temps:          0       0
+   340 ;;      Totals:         0       0
+   341 ;;Total ram usage:        0 bytes
+   342 ;; Hardware stack levels used:    1
+   343 ;; This function calls:
+   344 ;;		Nothing
+   345 ;; This function is called by:
+   346 ;;		_main
+   347 ;; This function uses a non-reentrant model
+   348 ;;
+   349                           
+   350                           
+   351                           ;psect for function _initPorts
+   352  03D0                     _initPorts:	
+   353                           
+   354                           ;PIC16F676program.c: 15: ADCON0 = 0b00000001;
+   355                           
+   356                           ;incstack = 0
+   357                           ; Regs used in _initPorts: [wreg+status,2]
+   358  03D0  3001               	movlw	1
+   359  03D1  1283               	bcf	3,5	;RP0=0, select bank0
+   360  03D2  009F               	movwf	31	;volatile
+   361                           
+   362                           ;PIC16F676program.c: 16: ADCON1 = 0b00010000;
+   363  03D3  3010               	movlw	16
+   364  03D4  1683               	bsf	3,5	;RP0=1, select bank1
+   365  03D5  009F               	movwf	31	;volatile
+   366                           
+   367                           ;PIC16F676program.c: 17: ANSEL = 0b01110000;
+   368  03D6  3070               	movlw	112
+   369  03D7  0091               	movwf	17	;volatile
+   370                           
+   371                           ;PIC16F676program.c: 18: CMCON = 0b00000111;
+   372  03D8  3007               	movlw	7
+   373  03D9  1283               	bcf	3,5	;RP0=0, select bank0
+   374  03DA  0099               	movwf	25	;volatile
+   375                           
+   376                           ;PIC16F676program.c: 24: TRISA = 0b00000000;
+   377  03DB  1683               	bsf	3,5	;RP0=1, select bank1
+   378  03DC  0185               	clrf	5	;volatile
+   379                           
+   380                           ;PIC16F676program.c: 26: TRISC = 0b00000111;
+   381  03DD  3007               	movlw	7
+   382  03DE  0087               	movwf	7	;volatile
+   383                           
+   384                           ;PIC16F676program.c: 31: PORTA = 0;
+   385  03DF  1283               	bcf	3,5	;RP0=0, select bank0
+   386  03E0  0185               	clrf	5	;volatile
+   387                           
+   388                           ;PIC16F676program.c: 33: PORTC = 0;
+   389  03E1  0187               	clrf	7	;volatile
+   390  03E2  0008               	return
+   391  03E3                     __end_of_initPorts:	
+   392                           
+   393                           	psect	text2
+   394  0389                     __ptext2:	
+   395 ;; *************** function _adConvert *****************
+   396 ;; Defined at:
+   397 ;;		line 21 in file "LightTestAnalogue.c"
+   398 ;; Parameters:    Size  Location     Type
+   399 ;;  chan            1    wreg     unsigned char 
+   400 ;; Auto vars:     Size  Location     Type
+   401 ;;  chan            1    0[BANK0 ] unsigned char 
+   402 ;; Return value:  Size  Location     Type
+   403 ;;                  1    wreg      unsigned char 
+   404 ;; Registers used:
+   405 ;;		wreg, status,2, status,0
+   406 ;; Tracked objects:
+   407 ;;		On entry : 0/0
+   408 ;;		On exit  : 0/0
+   409 ;;		Unchanged: 0/0
+   410 ;; Data sizes:     COMMON   BANK0
+   411 ;;      Params:         0       0
+   412 ;;      Locals:         0       1
+   413 ;;      Temps:          0       0
+   414 ;;      Totals:         0       1
+   415 ;;Total ram usage:        1 bytes
+   416 ;; Hardware stack levels used:    1
+   417 ;; This function calls:
+   418 ;;		Nothing
+   419 ;; This function is called by:
+   420 ;;		_main
+   421 ;; This function uses a non-reentrant model
+   422 ;;
+   423                           
+   424                           
+   425                           ;psect for function _adConvert
+   426  0389                     _adConvert:	
+   427                           
+   428                           ;incstack = 0
+   429                           ; Regs used in _adConvert: [wreg+status,2+status,0]
+   430                           ;adConvert@chan stored from wreg
+   431  0389  1283               	bcf	3,5	;RP0=0, select bank0
+   432  038A  00A0               	movwf	adConvert@chan
+   433                           
+   434                           ;LightTestAnalogue.c: 22: ADON = 1;
+   435  038B  141F               	bsf	31,0	;volatile
+   436                           
+   437                           ;LightTestAnalogue.c: 23: ADCON0 = (ADCON0 & 0b11000011);
+   438  038C  081F               	movf	31,w	;volatile
+   439  038D  39C3               	andlw	195
+   440  038E  009F               	movwf	31	;volatile
+   441                           
+   442                           ;LightTestAnalogue.c: 24: ADCON0 = (ADCON0 | chan);
+   443  038F  081F               	movf	31,w	;volatile
+   444  0390  0420               	iorwf	adConvert@chan,w
+   445  0391  009F               	movwf	31	;volatile
+   446  0392  0000               	nop	;# 
+   447                           
+   448                           ;LightTestAnalogue.c: 26: GO_DONE = 1;
+   449  0393  1283               	bcf	3,5	;RP0=0, select bank0
+   450  0394  149F               	bsf	31,1	;volatile
+   451  0395                     l38:	
+   452                           ;LightTestAnalogue.c: 28: while (GO_DONE);
+   453                           
+   454  0395  189F               	btfsc	31,1	;volatile
+   455  0396  2B95               	goto	l38
+   456                           
+   457                           ;LightTestAnalogue.c: 30: ADON = 0;
+   458  0397  101F               	bcf	31,0	;volatile
+   459                           
+   460                           ;LightTestAnalogue.c: 31: return (ADRESH);
+   461  0398  081E               	movf	30,w	;volatile
+   462  0399  0008               	return
+   463  039A                     __end_of_adConvert:	
+   464                           
+   465                           	psect	text3
+   466  03BE                     __ptext3:	
+   467 ;; *************** function _PWM3 *****************
+   468 ;; Defined at:
+   469 ;;		line 63 in file "LightTestAnalogue.c"
+   470 ;; Parameters:    Size  Location     Type
+   471 ;;  number          1    wreg     unsigned char 
+   472 ;; Auto vars:     Size  Location     Type
+   473 ;;  number          1    1[BANK0 ] unsigned char 
+   474 ;;  cTemp           1    2[BANK0 ] unsigned char 
+   475 ;; Return value:  Size  Location     Type
+   476 ;;		None               void
+   477 ;; Registers used:
+   478 ;;		wreg, status,2, status,0
+   479 ;; Tracked objects:
+   480 ;;		On entry : 0/0
+   481 ;;		On exit  : 0/0
+   482 ;;		Unchanged: 0/0
+   483 ;; Data sizes:     COMMON   BANK0
+   484 ;;      Params:         0       0
+   485 ;;      Locals:         0       2
+   486 ;;      Temps:          0       1
+   487 ;;      Totals:         0       3
+   488 ;;Total ram usage:        3 bytes
+   489 ;; Hardware stack levels used:    1
+   490 ;; This function calls:
+   491 ;;		Nothing
+   492 ;; This function is called by:
+   493 ;;		_main
+   494 ;; This function uses a non-reentrant model
+   495 ;;
+   496                           
+   497                           
+   498                           ;psect for function _PWM3
+   499  03BE                     _PWM3:	
+   500                           
+   501                           ;incstack = 0
+   502                           ; Regs used in _PWM3: [wreg+status,2+status,0]
+   503                           ;PWM3@number stored from wreg
+   504  03BE  1283               	bcf	3,5	;RP0=0, select bank0
+   505  03BF  00A1               	movwf	PWM3@number
+   506                           
+   507                           ;LightTestAnalogue.c: 64: unsigned char cTemp = 0b00000000;
+   508  03C0  01A2               	clrf	PWM3@cTemp
+   509  03C1                     l60:	
+   510                           ;LightTestAnalogue.c: 65: while (cTemp < 0b11111111) {
+   511                           
+   512  03C1  0A22               	incf	PWM3@cTemp,w
+   513  03C2  1903               	btfsc	3,2
+   514  03C3  0008               	return
+   515                           
+   516                           ;LightTestAnalogue.c: 66: if (cTemp >= number) {
+   517  03C4  0821               	movf	PWM3@number,w
+   518  03C5  0222               	subwf	PWM3@cTemp,w
+   519  03C6  1C03               	skipc
+   520  03C7  2BCA               	goto	l62
+   521                           
+   522                           ;LightTestAnalogue.c: 67: RC4 = 0;
+   523  03C8  1207               	bcf	7,4	;volatile
+   524                           
+   525                           ;LightTestAnalogue.c: 68: } else {
+   526  03C9  2BCB               	goto	l623
+   527  03CA                     l62:	
+   528                           
+   529                           ;LightTestAnalogue.c: 69: RC4 = 1;
+   530  03CA  1607               	bsf	7,4	;volatile
+   531  03CB                     l623:	
+   532                           
+   533                           ;LightTestAnalogue.c: 70: }
+   534                           ;LightTestAnalogue.c: 71: cTemp++;
+   535  03CB  3001               	movlw	1
+   536  03CC  00A0               	movwf	??_PWM3
+   537  03CD  0820               	movf	??_PWM3,w
+   538  03CE  07A2               	addwf	PWM3@cTemp,f
+   539  03CF  2BC1               	goto	l60
+   540  03D0                     __end_of_PWM3:	
+   541                           
+   542                           	psect	text4
+   543  03AC                     __ptext4:	
+   544 ;; *************** function _PWM2 *****************
+   545 ;; Defined at:
+   546 ;;		line 51 in file "LightTestAnalogue.c"
+   547 ;; Parameters:    Size  Location     Type
+   548 ;;  number          1    wreg     unsigned char 
+   549 ;; Auto vars:     Size  Location     Type
+   550 ;;  number          1    1[BANK0 ] unsigned char 
+   551 ;;  cTemp           1    2[BANK0 ] unsigned char 
+   552 ;; Return value:  Size  Location     Type
+   553 ;;		None               void
+   554 ;; Registers used:
+   555 ;;		wreg, status,2, status,0
+   556 ;; Tracked objects:
+   557 ;;		On entry : 0/0
+   558 ;;		On exit  : 0/0
+   559 ;;		Unchanged: 0/0
+   560 ;; Data sizes:     COMMON   BANK0
+   561 ;;      Params:         0       0
+   562 ;;      Locals:         0       2
+   563 ;;      Temps:          0       1
+   564 ;;      Totals:         0       3
+   565 ;;Total ram usage:        3 bytes
+   566 ;; Hardware stack levels used:    1
+   567 ;; This function calls:
+   568 ;;		Nothing
+   569 ;; This function is called by:
+   570 ;;		_main
+   571 ;; This function uses a non-reentrant model
+   572 ;;
+   573                           
+   574                           
+   575                           ;psect for function _PWM2
+   576  03AC                     _PWM2:	
+   577                           
+   578                           ;incstack = 0
+   579                           ; Regs used in _PWM2: [wreg+status,2+status,0]
+   580                           ;PWM2@number stored from wreg
+   581  03AC  1283               	bcf	3,5	;RP0=0, select bank0
+   582  03AD  00A1               	movwf	PWM2@number
+   583                           
+   584                           ;LightTestAnalogue.c: 52: unsigned char cTemp = 0b00000000;
+   585  03AE  01A2               	clrf	PWM2@cTemp
+   586  03AF                     l52:	
+   587                           ;LightTestAnalogue.c: 53: while (cTemp < 0b11111111) {
+   588                           
+   589  03AF  0A22               	incf	PWM2@cTemp,w
+   590  03B0  1903               	btfsc	3,2
+   591  03B1  0008               	return
+   592                           
+   593                           ;LightTestAnalogue.c: 54: if (cTemp >= number) {
+   594  03B2  0821               	movf	PWM2@number,w
+   595  03B3  0222               	subwf	PWM2@cTemp,w
+   596  03B4  1C03               	skipc
+   597  03B5  2BB8               	goto	l54
+   598                           
+   599                           ;LightTestAnalogue.c: 55: RC5 = 0;
+   600  03B6  1287               	bcf	7,5	;volatile
+   601                           
+   602                           ;LightTestAnalogue.c: 56: } else {
+   603  03B7  2BB9               	goto	l615
+   604  03B8                     l54:	
+   605                           
+   606                           ;LightTestAnalogue.c: 57: RC5 = 1;
+   607  03B8  1687               	bsf	7,5	;volatile
+   608  03B9                     l615:	
+   609                           
+   610                           ;LightTestAnalogue.c: 58: }
+   611                           ;LightTestAnalogue.c: 59: cTemp++;
+   612  03B9  3001               	movlw	1
+   613  03BA  00A0               	movwf	??_PWM2
+   614  03BB  0820               	movf	??_PWM2,w
+   615  03BC  07A2               	addwf	PWM2@cTemp,f
+   616  03BD  2BAF               	goto	l52
+   617  03BE                     __end_of_PWM2:	
+   618                           
+   619                           	psect	text5
+   620  039A                     __ptext5:	
+   621 ;; *************** function _PWM1 *****************
+   622 ;; Defined at:
+   623 ;;		line 39 in file "LightTestAnalogue.c"
+   624 ;; Parameters:    Size  Location     Type
+   625 ;;  number          1    wreg     unsigned char 
+   626 ;; Auto vars:     Size  Location     Type
+   627 ;;  number          1    1[BANK0 ] unsigned char 
+   628 ;;  cTemp           1    2[BANK0 ] unsigned char 
+   629 ;; Return value:  Size  Location     Type
+   630 ;;		None               void
+   631 ;; Registers used:
+   632 ;;		wreg, status,2, status,0
+   633 ;; Tracked objects:
+   634 ;;		On entry : 0/0
+   635 ;;		On exit  : 0/0
+   636 ;;		Unchanged: 0/0
+   637 ;; Data sizes:     COMMON   BANK0
+   638 ;;      Params:         0       0
+   639 ;;      Locals:         0       2
+   640 ;;      Temps:          0       1
+   641 ;;      Totals:         0       3
+   642 ;;Total ram usage:        3 bytes
+   643 ;; Hardware stack levels used:    1
+   644 ;; This function calls:
+   645 ;;		Nothing
+   646 ;; This function is called by:
+   647 ;;		_main
+   648 ;; This function uses a non-reentrant model
+   649 ;;
+   650                           
+   651                           
+   652                           ;psect for function _PWM1
+   653  039A                     _PWM1:	
+   654                           
+   655                           ;incstack = 0
+   656                           ; Regs used in _PWM1: [wreg+status,2+status,0]
+   657                           ;PWM1@number stored from wreg
+   658  039A  1283               	bcf	3,5	;RP0=0, select bank0
+   659  039B  00A1               	movwf	PWM1@number
+   660                           
+   661                           ;LightTestAnalogue.c: 40: unsigned char cTemp = 0b00000000;
+   662  039C  01A2               	clrf	PWM1@cTemp
+   663  039D                     l44:	
+   664                           ;LightTestAnalogue.c: 41: while (cTemp < 0b11111111) {
+   665                           
+   666  039D  0A22               	incf	PWM1@cTemp,w
+   667  039E  1903               	btfsc	3,2
+   668  039F  0008               	return
+   669                           
+   670                           ;LightTestAnalogue.c: 42: if (cTemp >= number) {
+   671  03A0  0821               	movf	PWM1@number,w
+   672  03A1  0222               	subwf	PWM1@cTemp,w
+   673  03A2  1C03               	skipc
+   674  03A3  2BA6               	goto	l46
+   675                           
+   676                           ;LightTestAnalogue.c: 43: RC3 = 0;
+   677  03A4  1187               	bcf	7,3	;volatile
+   678                           
+   679                           ;LightTestAnalogue.c: 44: } else {
+   680  03A5  2BA7               	goto	l607
+   681  03A6                     l46:	
+   682                           
+   683                           ;LightTestAnalogue.c: 45: RC3 = 1;
+   684  03A6  1587               	bsf	7,3	;volatile
+   685  03A7                     l607:	
+   686                           
+   687                           ;LightTestAnalogue.c: 46: }
+   688                           ;LightTestAnalogue.c: 47: cTemp++;
+   689  03A7  3001               	movlw	1
+   690  03A8  00A0               	movwf	??_PWM1
+   691  03A9  0820               	movf	??_PWM1,w
+   692  03AA  07A2               	addwf	PWM1@cTemp,f
+   693  03AB  2B9D               	goto	l44
+   694  03AC                     __end_of_PWM1:	
+   695  005E                     btemp	set	94	;btemp
+   696  005E                     wtemp	set	94
+   697  005E                     wtemp0	set	94
+   698  0060                     wtemp1	set	96
+   699  0062                     wtemp2	set	98
+   700  0064                     wtemp3	set	100
+   701  0066                     wtemp4	set	102
+   702  0068                     wtemp5	set	104
+   703  005F                     wtemp6	set	95
+   704  005E                     ttemp	set	94
+   705  005E                     ttemp0	set	94
+   706  0061                     ttemp1	set	97
+   707  0064                     ttemp2	set	100
+   708  0067                     ttemp3	set	103
+   709  005F                     ttemp4	set	95
+   710  005E                     ltemp	set	94
+   711  005E                     ltemp0	set	94
+   712  0062                     ltemp1	set	98
+   713  0066                     ltemp2	set	102
+   714  0060                     ltemp3	set	96
+
+
+Data Sizes:
+    Strings     0
+    Constant    0
+    Data        0
+    BSS         0
+    Persistent  0
+    Stack       0
+
+Auto Spaces:
+    Space          Size  Autos    Used
+    COMMON            0      0       0
+    BANK0            62      7       7
+
+Pointer List with Targets:
+
+    None.
+
+Critical Paths under _main in COMMON
+
+    None.
+
+Critical Paths under _main in BANK0
+
+    _main->_PWM1
+    _main->_PWM2
+    _main->_PWM3
+
+Call Graph Tables:
+
+ ---------------------------------------------------------------------------------
+ (Depth) Function   	        Calls       Base Space   Used Autos Params    Refs
+ ---------------------------------------------------------------------------------
+ (0) _main                                                 4     4      0     295
+                                              3 BANK0      4     4      0
+                               _PWM1
+                               _PWM2
+                               _PWM3
+                          _adConvert
+                          _initPorts
+ ---------------------------------------------------------------------------------
+ (1) _initPorts                                            0     0      0       0
+ ---------------------------------------------------------------------------------
+ (1) _adConvert                                            1     1      0      22
+                                              0 BANK0      1     1      0
+ ---------------------------------------------------------------------------------
+ (1) _PWM3                                                 3     3      0      68
+                                              0 BANK0      3     3      0
+ ---------------------------------------------------------------------------------
+ (1) _PWM2                                                 3     3      0      68
+                                              0 BANK0      3     3      0
+ ---------------------------------------------------------------------------------
+ (1) _PWM1                                                 3     3      0      68
+                                              0 BANK0      3     3      0
+ ---------------------------------------------------------------------------------
+ Estimated maximum stack depth 1
+ ---------------------------------------------------------------------------------
+
+ Call Graph Graphs:
+
+ _main (ROOT)
+   _PWM1
+   _PWM2
+   _PWM3
+   _adConvert
+   _initPorts
+
+ Address spaces:
+Name               Size   Autos  Total    Cost      Usage
+BITCOMMON            0      0       0       0        0.0%
+EEDATA              80      0       0       0        0.0%
+NULL                 0      0       0       0        0.0%
+CODE                 0      0       0       0        0.0%
+BITSFR0              0      0       0       1        0.0%
+SFR0                 0      0       0       1        0.0%
+COMMON               0      0       0       1        0.0%
+BITSFR1              0      0       0       2        0.0%
+SFR1                 0      0       0       2        0.0%
+STACK                0      0       0       2        0.0%
+BITBANK0            3E      0       0       3        0.0%
+BANK0               3E      7       7       4       11.3%
+ABS                  0      0       0       5        0.0%
+DATA                 0      0       0       6        0.0%
+
+
+Microchip Technology PIC Macro Assembler V1.35 build -356382666 
+Symbol Table                                                                                   Wed Sep 09 13:21:14 2015
+
+            __CFG_CP$OFF 0000                       l44 039D                       l52 03AF  
+                     l60 03C1                       l46 03A6                       l54 03B8  
+                     l62 03CA                       l38 0395                      l607 03A7  
+                    l615 03B9                      l623 03CB                      l627 03E4  
+                    _RC3 003B                      _RC4 003C                      _RC5 003D  
+           __CFG_CPD$OFF 0000                     _ADON 00F8                     _PWM1 039A  
+                   _PWM2 03AC                     _PWM3 03BE                     _main 03E3  
+                   btemp 005E                     ltemp 005E                     start 0000  
+                   ttemp 005E                     wtemp 005E                    ?_PWM1 0020  
+                  ?_PWM2 0020                    ?_PWM3 0020                    ?_main 0020  
+          __CFG_WDTE$OFF 0000                    _CMCON 0019                    _ANSEL 0091  
+                  _PORTA 0005                    _PORTC 0007                    _TRISA 0085  
+                  _TRISC 0087            __CFG_PWRTE$ON 0000           __CFG_BOREN$OFF 0000  
+                  ltemp0 005E                    ltemp1 0062                    ltemp2 0066  
+                  ltemp3 0060                    ttemp0 005E                    ttemp1 0061  
+                  ttemp2 0064                    ttemp3 0067                    ttemp4 005F  
+                  status 0003                    wtemp0 005E                    wtemp1 0060  
+                  wtemp2 0062                    wtemp3 0064                    wtemp4 0066  
+                  wtemp5 0068                    wtemp6 005F             __end_of_PWM1 03AC  
+           __end_of_PWM2 03BE             __end_of_PWM3 03D0           __CFG_MCLRE$OFF 0000  
+        __initialization 03FD             __end_of_main 03FD                   ??_PWM1 0020  
+                 ??_PWM2 0020                   ??_PWM3 0020                   ??_main 0023  
+                 _ADCON0 001F                   _ADCON1 009F                   _ADRESH 001E  
+     __size_of_adConvert 0011  __end_of__initialization 03FD           __pcstackCOMMON 0000  
+     __size_of_initPorts 0013               __pmaintext 03E3        __end_of_adConvert 039A  
+              PWM1@cTemp 0022                PWM2@cTemp 0022                PWM3@cTemp 0022  
+                _GO_DONE 00F9                  __ptext1 03D0                  __ptext2 0389  
+                __ptext3 03BE                  __ptext4 03AC                  __ptext5 039A  
+      __end_of_initPorts 03E3     end_of_initialization 03FD               main@MIDIN2 0025  
+    start_initialization 03FD                _adConvert 0389                ___latbits 0000  
+          __pcstackBANK0 0020               ?_adConvert 0020                _initPorts 03D0  
+             PWM1@number 0021               PWM2@number 0021               PWM3@number 0021  
+              main@HIIN2 0024                main@LOIN2 0026               ?_initPorts 0020  
+            ??_adConvert 0000            __size_of_PWM1 0012            __size_of_PWM2 0012  
+          __size_of_PWM3 0012            __size_of_main 001A              ??_initPorts 0000  
+          adConvert@chan 0020        __CFG_FOSC$INTRCIO 0000  

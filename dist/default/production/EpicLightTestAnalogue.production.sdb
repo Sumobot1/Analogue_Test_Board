@@ -1,0 +1,110 @@
+[p LITE_MODE AUTOSTATIC PIC14 PICREGULAR PICMID ]
+[d version 1.1 ]
+[d edition pro ]
+[d chip 16F676 ]
+[d frameptr 6 ]
+"62 C:\Program Files (x86)\Microchip\xc8\v1.35\sources\common\float.c
+[v ___ftpack __ftpack `(f  1 e 3 0 ]
+"86 C:\Program Files (x86)\Microchip\xc8\v1.35\sources\common\ftadd.c
+[v ___ftadd __ftadd `(f  1 e 3 0 ]
+"6 C:\Program Files (x86)\Microchip\xc8\v1.35\sources\pic\eeprom.c
+[v _eecpymem eecpymem `(v  1 e 0 0 ]
+"24
+[v _memcpyee memcpyee `(v  1 e 0 0 ]
+"21 C:\Users\Michael\Documents\MPLABXProjects\EpicLightTestAnalogue\LightTestAnalogue.c
+[v _adConvert adConvert `(uc  1 e 1 0 ]
+"39
+[v _PWM1 PWM1 `(v  1 e 0 0 ]
+"51
+[v _PWM2 PWM2 `(v  1 e 0 0 ]
+"63
+[v _PWM3 PWM3 `(v  1 e 0 0 ]
+"78
+[v _main main `(i  1 e 2 0 ]
+"8 C:\Users\Michael\Documents\MPLABXProjects\EpicLightTestAnalogue\PIC16F676program.c
+[v _initPorts initPorts `(v  1 e 0 0 ]
+"160 C:\Program Files (x86)\Microchip\xc8\v1.35\include\pic16f676.h
+[v _PORTA PORTA `VEuc  1 e 1 @5 ]
+"209
+[v _PORTC PORTC `VEuc  1 e 1 @7 ]
+"483
+[v _CMCON CMCON `VEuc  1 e 1 @25 ]
+"541
+[v _ADRESH ADRESH `VEuc  1 e 1 @30 ]
+"547
+[v _ADCON0 ADCON0 `VEuc  1 e 1 @31 ]
+"712
+[v _TRISA TRISA `VEuc  1 e 1 @133 ]
+"761
+[v _TRISC TRISC `VEuc  1 e 1 @135 ]
+"949
+[v _ANSEL ANSEL `VEuc  1 e 1 @145 ]
+"1345
+[v _ADCON1 ADCON1 `VEuc  1 e 1 @159 ]
+"1404
+[v _ADON ADON `VEb  1 e 0 @248 ]
+"1468
+[v _GO_DONE GO_DONE `VEb  1 e 0 @249 ]
+"1518
+[v _RC0 RC0 `VEb  1 e 0 @56 ]
+"1520
+[v _RC1 RC1 `VEb  1 e 0 @57 ]
+"1522
+[v _RC2 RC2 `VEb  1 e 0 @58 ]
+"1524
+[v _RC3 RC3 `VEb  1 e 0 @59 ]
+"1526
+[v _RC4 RC4 `VEb  1 e 0 @60 ]
+"1528
+[v _RC5 RC5 `VEb  1 e 0 @61 ]
+"78 C:\Users\Michael\Documents\MPLABXProjects\EpicLightTestAnalogue\LightTestAnalogue.c
+[v _main main `(i  1 e 2 0 ]
+{
+"116
+} 0
+"8 C:\Users\Michael\Documents\MPLABXProjects\EpicLightTestAnalogue\PIC16F676program.c
+[v _initPorts initPorts `(v  1 e 0 0 ]
+{
+"36
+} 0
+"21 C:\Users\Michael\Documents\MPLABXProjects\EpicLightTestAnalogue\LightTestAnalogue.c
+[v _adConvert adConvert `(uc  1 e 1 0 ]
+{
+[v adConvert@chan chan `uc  1 a 1 wreg ]
+[v adConvert@chan chan `uc  1 a 1 wreg ]
+[v adConvert@chan chan `uc  1 a 1 0 ]
+"32
+} 0
+"63
+[v _PWM3 PWM3 `(v  1 e 0 0 ]
+{
+[v PWM3@number number `uc  1 a 1 wreg ]
+"64
+[v PWM3@cTemp cTemp `uc  1 a 1 2 ]
+"63
+[v PWM3@number number `uc  1 a 1 wreg ]
+[v PWM3@number number `uc  1 a 1 1 ]
+"73
+} 0
+"51
+[v _PWM2 PWM2 `(v  1 e 0 0 ]
+{
+[v PWM2@number number `uc  1 a 1 wreg ]
+"52
+[v PWM2@cTemp cTemp `uc  1 a 1 2 ]
+"51
+[v PWM2@number number `uc  1 a 1 wreg ]
+[v PWM2@number number `uc  1 a 1 1 ]
+"61
+} 0
+"39
+[v _PWM1 PWM1 `(v  1 e 0 0 ]
+{
+[v PWM1@number number `uc  1 a 1 wreg ]
+"40
+[v PWM1@cTemp cTemp `uc  1 a 1 2 ]
+"39
+[v PWM1@number number `uc  1 a 1 wreg ]
+[v PWM1@number number `uc  1 a 1 1 ]
+"49
+} 0
